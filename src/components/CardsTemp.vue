@@ -27,6 +27,7 @@ export default {
   margin: 5px;
   background-image: linear-gradient(to right, rgb(218, 218, 84), rgba(66, 235, 89, 0.815));
   color: white;
+  text-align: center;
   align-content: center;
   justify-content: center;
 }
@@ -40,7 +41,8 @@ export default {
 }
 .container h4{
   text-transform: uppercase;
-  color: rgb(39, 8, 99);
+  color:rgb(70, 69, 66)
+  
 }
 
 </style>

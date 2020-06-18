@@ -24,8 +24,7 @@
     </div>
     <input  
       type="text"
-      name="inputText" 
-      id=""
+      v-model="addFoodInput"
      >
     <button v-on:click="addToDiv">Add a food</button>
 
@@ -52,12 +51,12 @@ export default {
       info:[],
       error:'',
       inputText: '',
+      addFoodInput:'',
        food:[ 
          {id: uuidv4(), food: "yams"},
          {id:uuidv4(), food: "rice"},
          {id: uuidv4(), food: "potatoes"},],
     }
-  
   },
   async mounted () {
   
@@ -78,9 +77,10 @@ export default {
     addToDiv:function(){
        const inputMsg ={
         id: uuidv4(),
-        food: this.inputText.value
+        food: this.addFoodInput
       }
      this.food.push(inputMsg)
+     this.addFoodInput= ''
      
    }
  },
@@ -112,5 +112,17 @@ export default {
   text-align: center;
   align-items: center;
   justify-content: center;
+  margin: 10px auto;
+}
+
+input[type=text]{
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+button{
+  padding: 12px 20px;
+  margin: 0 5px;
 }
 </style>
