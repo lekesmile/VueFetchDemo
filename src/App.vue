@@ -18,6 +18,7 @@
        v-on:dblclick.native="deleteDiv"
        :nameTitle= "food.food"
        :gid= "food.id"
+       :imageTemp= "food.image"
       
      />
      
@@ -53,9 +54,9 @@ export default {
       inputText: '',
       addFoodInput:'',
        food:[ 
-         {id: uuidv4(), food: "yams"},
-         {id:uuidv4(), food: "rice"},
-         {id: uuidv4(), food: "potatoes"},],
+         {id: uuidv4(), food: "yams", image: 'https://images.unsplash.com/photo-1521834029104-b056ecebbb05?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1269&q=80'},
+         {id:uuidv4(), food: "rice", image: 'https://images.unsplash.com/photo-1502447533750-9860c1269ae3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80'},
+         {id: uuidv4(), food: "potatoes", image: 'https://images.unsplash.com/photo-1572716680685-c71db7198f09?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80'},],
     }
   },
   async mounted () {
@@ -77,7 +78,8 @@ export default {
     addToDiv:function(){
        const inputMsg ={
         id: uuidv4(),
-        food: this.addFoodInput
+        food: this.addFoodInput,
+        image: 'https://images.unsplash.com/photo-1586777730558-9a08ac2bfec2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80'
       }
      this.food.push(inputMsg)
      this.addFoodInput= ''

@@ -1,6 +1,6 @@
 <template>
   <div class="card">
-  <!-- <img src= {{image}}  alt="Avatar" style="width:100%"> -->
+  <img :src= "imageTemp" alt="Avatar" style="width:100%; height:120px">
   <div class="container">
     <h4><b> {{nameTitle}} </b></h4>
     <p> {{gid }} </p>
@@ -12,7 +12,7 @@
 export default {
   name: 'CardsTemp',
   props: {
-    // image: String,
+    imageTemp: String,
     nameTitle: String,
     gid: String
   }
@@ -30,6 +30,7 @@ export default {
   text-align: center;
   align-content: center;
   justify-content: center;
+  
 }
 
 .card:hover {
